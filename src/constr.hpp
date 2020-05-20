@@ -17,7 +17,7 @@ struct constr : std::array<char, N> {
 			if constexpr (A != B) {
 				return false;
 			}
-			if constexpr (i < A) {
+			else if constexpr (i < A) {
 				return a[i] == b[i] && _compare<A, B, i + 1>(a, b);
 			}
 			else {
